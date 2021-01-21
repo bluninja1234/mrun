@@ -1,0 +1,15 @@
+{
+  "name": "mrun",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^5.11.13"
+  },
+  "bin": {
+    "mrun": "./index.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
