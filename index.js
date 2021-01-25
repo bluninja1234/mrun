@@ -11,6 +11,12 @@ var files = [];
 
 console.log("loading...");
 
+if (!fs.existsSync(path.join(__dirname, "/modules"))) {
+    fs.mkdirSync(path.join(__dirname, "/modules"));
+    console.log("Setting up initial install...");
+    fs.writeFileSync(path.join(__dirname, "/modules/help.js"), "module.exports = function help(done) { console.log(\"Mrun\"); done(); }")
+}
+
 fs.readdir(path.join(__dirname, "/modules"), (err, data) => {
     if (err) throw new Error(err);
 
